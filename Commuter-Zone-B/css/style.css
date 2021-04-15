@@ -1,0 +1,295 @@
+body{
+	color:#666;
+	font-family:'Ubuntu', Arial, Helvetica, sans-serif; 
+	font-size:1em;
+	line-height:1.4em; 
+	font-weight:normal;
+	padding: 0 20px;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+	font-family:'Droid Serif', Arial, Helvetica, sans-serif; 
+	line-height:1em;
+	margin:.0em 0;
+	padding:0;
+} 
+br{
+	margin: .5px 0;
+	line-height:.5px;
+}
+a,
+a:visited,
+a:active,
+a:hover{color:#0099ff;}
+a:hover{ text-decoration:none;}
+
+ *{	box-sizing:border-box;
+	-moz-box-sizing:border-box;}
+
+p{ 
+	margin:0 0 .5em;
+	line-height: 80%;
+}
+
+img{
+	max-width: 100%;
+	height:auto;
+	padding: .5em 0;
+}
+
+img.legend{
+	max-height: 100px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+img.logo{
+	max-height:55px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+.center
+{
+	line-height:.5px;
+	padding:0px;
+}
+/*MAIN MENU*/
+.menu-toggle{
+	display:block;
+	padding:1px;
+	margin:1px 0 0;
+	background:#666;
+	color:#fff;
+	max-height: 20px;
+	cursor:pointer;
+	text-transform:uppercase;
+	text-align: center;
+	font-size:10px;
+	visibility: visible;
+}
+.menu-toggle.toggled-on{
+	background:#0099ff;
+}
+.srt-menu{
+	display:none;
+}	
+.srt-menu.toggled-on{
+	display:block;
+	position:relative;
+	z-index:10;
+}
+.srt-menu{
+	clear:both;
+	margin-bottom:1px;
+}
+.srt-menu li a {
+	background:#0099ff;
+	color:#fff;
+	display:block;
+	margin:1px 0; 
+	padding:7px;
+	text-decoration:none;
+}
+.srt-menu li a:hover{
+	background:#dadada;
+	color:#0099ff;
+}
+
+a.buttonlink{ 
+	background:#0099ff; 
+	border-radius:7px; 
+	color:#fff;
+	display:block;
+	float:left; 
+	margin:10px 10px 10px 0; 
+	padding:10px;
+	text-decoration:none;
+}
+a.buttonlink:hover{
+	background:#8dbc01;
+	color:#0099ff;
+}
+.greenelement{
+	background:#5ec79e;
+	color:#fff;
+}
+.violetelement{
+	background:#887dc2;
+	color:#fff;
+}
+
+
+/* Contain floats*/ 
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after,
+.container:after,
+.row:after{
+  clear: both;
+}
+
+.sliderHolder {
+	padding: 0px;
+}
+
+.btn
+{
+	color: #fff !important;
+	background-color: royalblue;
+	border-color: #222;
+	display: inline-block;
+	padding: .5em 1em;
+	margin-bottom: 0;
+	font-weight: 400;
+	line-height: 1.2;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: .2em;
+	text-decoration: none;
+}
+
+.btn:hover
+{
+	color: #fff !important;
+	background-color: green;
+}
+
+.btn:focus
+{
+	color: #fff !important;
+	background-color: black;
+}
+
+.btn:active
+{
+	color: #fff !important;
+	background-color: red;
+}
+
+
+/*PINCH ZOOM*/
+.zoomInOn, .zoomInOff, .zoomOutOn, .zoomOutOff
+{
+   width:34px;
+   height:34px;
+   display:block;
+   position:absolute;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+ 
+.zoomInOn, .zoomInOff
+{
+   background-image:url(../assets/zoom_in.png);
+   top:10px;
+   right:10px;
+}
+ 
+.zoomOutOn, .zoomOutOff
+{
+   background-image:url(../assets/zoom_out.png);
+   top:52px;
+   right:10px;
+}
+ 
+.zoomInOn, .zoomOutOn
+{
+   opacity:1;
+   cursor:pointer;
+}
+ 
+.zoomInOff, .zoomOutOff
+{
+   opacity:0.3;
+   cursor:auto;
+}
+
+
+/* RESPONSIVE */
+/*
+LARGER MOBILE DEVICES
+This is for mobile devices with a bit larger screens.
+*/
+/**/
+
+
+/*GRID*/
+/*
+ & Columns : 12 
+
+ */
+ .row{
+	 margin-left: -15px;
+     margin-right: -15px;
+}
+ 
+.grid_1 { width: 8.33333333%; }
+.grid_2 { width: 16.66666667%; }
+.grid_3 { width: 25%; }
+.grid_4 { width: 33.33333333%; }
+.grid_5 { width: 41.66666667%; }
+.grid_6 { width: 50%; }
+.grid_7 { width: 58.33333333%; }
+.grid_8 { width: 66.66666667%; }
+.grid_9 { width: 75%; }
+.grid_10 { width: 83.33333333%; }
+.grid_11 { width: 91.66666667%; }
+.grid_12 { width: 100%; }
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+	float: left;
+	display: block;
+}
+
+.rightfloat{float:right;}
+/* @notation inspired by tinyGrid, .row and percentage by Twitter Bootstrap
+ */
+ 
+#hero [class*="grid_"] { margin-bottom:-20px;}
+
+} 
+
+
+@media only screen and (min-width: 471px) {
+
+	img.logo {
+	max-height:300px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	}	
+}
+
+@media only screen and (min-width: 920px) {
+	.menu-toggle {
+		visibility: hidden;
+		display: none;
+	}
+	img.legend	{
+		max-height: 200px;
+	}
+}
+
+
