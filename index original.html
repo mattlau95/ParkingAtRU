@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" href="css/styles1.css">
+</head>
+
+<body onload="viewLoad()">
+<div class="container">
+		<div class="header" style="text-align:center;">
+				<!--<h1 class="header-heading">GiveMeaAParking.Space/Rutgers</h1> -->
+			<img class="img-responsive" id="logo" src="images/givemeaparkingspacelogo.png" alt="GiveMeAParkingSpace.com/Rutgers">
+
+			<p id="blank space A"></p>
+			<p id="description" style="text-alight:center;">Dear Users, Thank you for visiting Give Me A Parking Space RU! This app is not responsible for any parking tickets you may receive! I have based the parking information on the maps based on the Official Rutgers Parking Memo. If you find any mistakes or have any suggestions, please let us know my e-mailing support@givemeaparking.space. It would be much appreciated! </p>
+			<p id="updatetext" style="text-aligh:center;">An update for Fall 2016 and Spring 2016 Parking is in the works, as well as an iOS app and Android mobile app.</p>
+
+		</div>
+
+			<div style="text-align:center;">
+				<!-- /*<button type="button" onclick="CookDouglass()">Cook/Douglass Campus</button>
+				<button type="button" onclick="CollegeAve()">College Ave Campus</button>
+				<button type="button" onclick="Busch()">Busch Campus</button>
+				<button type="button" onclick="Livingston()">Livingston Campus</button>
+				<button type="button" onclick="Readme">Read Me</button>
+				<button type="button" onclick="ContactUs">Contact Us</button>*/ -->
+				<p>	
+					<a href="#!" id="firstButton" class="btn" onclick="Readme()">Official Parking Memo</a>
+					<a href="#!" class="btn" onclick="Busch()">Busch</a>
+					<a href="#!" class="btn" onclick="CollegeAve()">College Ave</a>
+					<a href="#!" class="btn" onclick="CookDouglass()">Cook/Douglass</a>
+					<a href="#!" class="btn" onclick="Livingston()">Livingston</a>
+				</p> 
+			</div>
+
+			<div id="legendDiv" style="text-align:center;">
+				<img class="img-responsive" id="Legend" src="images/ParkingSummer2016Legend.png" alt="Legend" display="none">
+			</div>
+
+			<p id="blank space F"></p>
+
+			<p id="demo"></p>
+
+			<div style="text-align:center;">
+			 	<a href="" id="imgLink">
+			 		<img class="img-responsive" id="myImage" src="images/InfoSummerSession2016.png" alt="Summer Session Parking Info">
+				</a>
+			</div>
+
+</div>
+
+<script>
+
+function viewLoad() {
+	document.getElementById("Legend").style.display="none";
+	// doesn't work: document.getElementById("firstButton").style.color="black"; 
+}
+
+function CookDouglass() {
+	var image = document.getElementById('myImage');
+    image.src = "images/CookDoug.png";
+    document.getElementById("imgLink").href = "images/CookDoug.png";
+    document.getElementById("Legend").style.display="block";
+    document.getElementById("Legend").style = "text-align:center;";
+}
+
+function CollegeAve() {
+	var image = document.getElementById('myImage');
+    image.src = "images/CollegeAve.png";
+    document.getElementById("imgLink").href = "images/CollegeAve.png";
+    document.getElementById("Legend").style.display="block";
+    document.getElementById("Legend").style = "text-align:center;";
+}
+
+function Busch() {
+	var image = document.getElementById('myImage');
+    image.src = "images/Busch.png";
+    document.getElementById("imgLink").href = "images/Busch.png";
+    document.getElementById("Legend").style.display="block";
+    document.getElementById("Legend").style = "text-align:center;";
+}
+
+function Livingston() {
+	var image = document.getElementById('myImage');
+    image.src = "images/Livi.png";
+    document.getElementById("imgLink").href = "images/Livi.png";
+    document.getElementById("Legend").style.display="block";
+    document.getElementById("Legend").style = "text-align:center;";
+
+}
+function Readme() {
+	var image = document.getElementById('myImage');
+    image.src = "images/InfoSummerSession2016.png";
+    document.getElementById("imgLink").href = "images/InfoSummerSession2016.png";
+    document.getElementById("Legend").style.display="none";
+}
+
+</script>
+
+</body>
+</html>

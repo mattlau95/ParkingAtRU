@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="author" content="Matthew Lau"/>
+	<meta name="description" content="Highlighted Maps that show Parking Space Regulations for all Permit-Holders during the Summer."/>
+	<meta name="keywords" content="Parking, Parking Space, Rutgers, Rutgers University, Rutgers University of New Brunswick, Rutgers Parking, Rutgers University Parking, Rutgers Parking Ticket"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:description" content="Highlighted Maps that show Parking Space Regulations for all Permit-Holders during the Summer."/>
+	<meta property="og:title" content="Give Me a Parking Space RU"/>
+
+	<title>RU Parking</title>
+		<!--I suggest you put a real favicon here or delete it.--><link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/styles1.css">
+</head>
+
+<body>
+	<div class="container">
+		<!--Make a new class in css called center and in center put text-align:center
+		ex:
+		.center{
+	    text-align:center;
+	  }
+		And replace all the html written styles. And delete my forced style below this.
+		Also add selected, since i use it to highlight which one is active.
+		-->
+		<style>
+			.center{
+				text-align: center;
+			}
+			.selected{
+				background-color: black;
+			}
+		</style> <!--Delete this style tag and everything in it after you add them to styles1.css-->
+		<div class="header center">
+			<img class="img-responsive" id="logo" src="images/givemeaparkingspacelogo.png" alt="GiveMeAParkingSpace.com/Rutgers">
+			<!--p id="descriptionLetter">Dear Users, Thank you for visiting Give Me A Parking Space RU! This app is not responsible for any parking tickets you may receive. I have based the parking information on the maps based on the information provided by the Rutgers Department of Transportation Website (URL: http://parktran.rutgers.edu/ ). If you find any mistakes or have any suggestions, please let us know my e-mailing support@givemeaparking.space. It would be much appreciated!</p>
+			<p id="updateText">Future plans include iOS and Android app development.</p-->
+
+		</div>
+
+		<!--ul class="topnav" id="myTopnav">
+ 			<li><a class="active" href="#home">Home</a></li>
+  			<li><a href="#news">News</a></li>
+  			<li><a href="#contact">Contact</a></li>
+  			<li><a href="#about">About</a></li>
+  			<li class="icon">
+  	  			<a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+ 			</li>
+		</ul-->
+
+		<div class="center">
+			<p>
+				<!--
+				<a href="#!" class="btn selected" onclick="updateView(this,'Readme');">Official Parking Memo</a> 
+			 	-->
+				<p><a href="Commuter-Zone-A/index.html" class="btn">Commuter Zone A</a>	<a href="Commuter-Zone-B/index.html" class="btn">Commuter Zone B</a></p>
+				<p><a href="Commuter-Zone-C/index.html" class="btn">Commuter Zone C</a> <a href="Commuter-Zone-D/index.html" class="btn">Commuter Zone D</a></p>
+				<p><a href="Commuter-Zone-L/index.html" class="btn">Commuter Zone L</a></p>
+				<p> Commuter Lot H --- COMING SOON </p>
+				<p> Night Commuters --- COMING SOON </p>
+				<p> Resident Permits--- COMING SOON </p>
+			</p>
+		</div>
+
+		<div>
+
+			<p style="text-align:center; padding-left:50px; padding-right:50px; line-height:1.25em; font-size:10px;"id="descriptionLetter">Dear Users, Thank you for visiting Give Me A Parking Space RU! This app is not responsible for any parking tickets you may receive. I have based the parking information on the maps based on the information provided by the Rutgers Department of Transportation Website (URL: http://parktran.rutgers.edu/ ). If you find any mistakes or have any suggestions, please let us know my e-mailing support@givemeaparking.space. It would be much appreciated!</p>
+			<p style="text-align:center; padding-left:50px; padding-right:50px; line-height:1.25em; font-size:10px;"id="descriptionLetter" id="updateText">Future plans include iOS and Android app development.</p>
+
+		</div>
+
+		<!-- Start of SimpleHitCounter Code -->
+		<div align="center">
+			<a href="http://www.simplehitcounter.com" target="_blank">
+			<img src="http://simplehitcounter.com/hit.php?uid=2160975&f=16777215&b=0" border="0" height="18" width="83" alt="web counter"></a>
+			<br>
+			<a href="http://www.simplehitcounter.com" target="_blank" style="text-decoration:none;">web counter</a>
+		</div>
+<!-- End of SimpleHitCounter Code -->
+<!--
+		<div id="legendDiv" class="center">
+			<img class="img-responsive" id="Legend" src="http://givemeaparking.space/RU/summer/images/ParkingSummer2016Legend.png" alt="Legend" display="none">
+		</div> -->
+
+		<!--Instead of this blank space, I suggest you do something with css to make a padding.-->
+		
+<!--
+		<p id="blank space F"></p>
+
+		<p id="demo"></p>
+
+		<div class="center">
+		 	<a href="#" id="imgLink">
+		 		<img class="img-responsive" id="myImage" src="http://givemeaparking.space/RU/summer/images/InfoSummerSession2016.png" alt="Summer Session Parking Info">
+			</a>
+		</div>
+	</div>
+-->
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+		$("#Legend").hide();
+	});
+
+	function updateView(btn, campus){
+		var image = $("#myImage");
+		var link = $("#imgLink");
+		var legend = $("#Legend");
+
+		if(campus == "CookDouglass"){
+			image.attr("src","images/CookDoug.png");
+			link.attr("href","images/CookDoug.png");
+			legend.show();
+		}
+		else if(campus == "CollegeAve"){
+			image.attr("src","images/CollegeAve.png");
+			link.attr("href","images/CollegeAve.png");
+			legend.show();
+		}
+		else if(campus == "Busch"){
+			image.attr("src","images/Busch.png");
+			link.attr("href","images/Busch.png");
+			legend.show();
+		}
+		else if(campus == "Livingston"){
+			image.attr("src","images/Livi.png");
+			link.attr("href","images/Livi.png");
+			legend.show();
+		}
+		else{
+			image.attr("src","images/InfoSummerSession2016.png");
+			link.attr("href","images/InfoSummerSession2016.png");
+			legend.hide();
+		}
+
+		$(".selected").removeClass("selected");
+		$(btn).addClass("selected");
+	}
+	</script>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90939303-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
