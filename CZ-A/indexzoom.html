@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="author" content="Matthew Lau"/>
+	<meta name="description" content="Highlighted Maps that show Parking Space Regulations for all Permit-Holders during the Summer."/>
+	<meta name="keywords" content="Parking, Parking Space, Rutgers, Rutgers University, Rutgers University of New Brunswick, Rutgers Parking, Rutgers University Parking, Rutgers Parking Ticket"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:description" content="Highlighted Maps that show Parking Space Regulations for all Permit-Holders during the Summer."/>
+	<meta property="og:title" content="Give Me a Parking Space RU"/>
+
+	<title>RU Parking</title>
+		<!--I suggest you put a real favicon here or delete it.--><link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/styles1.css">
+</head>
+
+<body>
+	<div class="container">
+		<!--Make a new class in css called center and in center put text-align:center
+		ex:
+		.center{
+	    text-align:center;
+	  }
+		And replace all the html written styles. And delete my forced style below this.
+		Also add selected, since i use it to highlight which one is active.
+		-->
+		<style>
+			.center{
+				text-align: center;
+			}
+			.selected{
+				background-color: black;
+			}
+		</style> <!--Delete this style tag and everything in it after you add them to styles1.css-->
+		<div class="header center">
+			<p>RU Parking 2016-2017 Commuter Zone A</p>
+			<img class="img-responsive" id="logo" src="images/givemeaparkingspacelogo.png" alt="GiveMeAParkingSpace.com/Rutgers">
+
+			<p id="blank space A"></p>
+			<p id="descriptionLetter">Dear Users, Thank you for visiting Give Me A Parking Space RU! This app is not responsible for any parking tickets you may receive. I have based the parking information on the maps based on the information provided by the Rutgers Department of Transportation Website (URL: http://parktran.rutgers.edu/ ). If you find any mistakes or have any suggestions, please let us know my e-mailing support@givemeaparking.space. It would be much appreciated! </p>
+			<p id="updateText">Future plans include iOS and Android app development.</p>
+
+		</div>
+
+		<div class="center">
+			<p>
+				<a href="#!" class="btn selected" onclick="updateView(this,'Readme');">Official Parking Memo</a>
+				<a href="#!" class="btn" onclick="updateView(this,'Busch')">Busch</a>
+				<a href="#!" class="btn" onclick="updateView(this,'CollegeAve');">College Ave</a>
+				<a href="#!" class="btn" onclick="updateView(this,'CookDouglass');">Cook/Douglass</a>
+				<a href="#!" class="btn" onclick="updateView(this,'Livingston');">Livingston</a>
+			</p>
+		</div>
+
+		<div id="legendDiv" class="center">
+			<img class="img-responsive" id="Legend" src="images/legend.png" alt="Legend" display="none">
+		</div>
+
+		<!--Instead of this blank space, I suggest you do something with css to make a padding.-->
+		<p id="blank space F"></p>
+
+		<p id="demo"></p>
+
+		<p>The memo below is taken directly from the official Rutgers DOTS website (http://parktran.rutgers.edu/zonea.shtml ).</p>
+		
+
+		<div id="zoom" class="az-wrap">
+ 			<span class="az-wrap-inner">
+
+    			<div class="small az-small">
+     				 <div class="az-overly az-overlay"></div>
+      					<span class="az-small-inner">
+       						 <a href="#" id="imgLink">
+		 						<img class="img-responsive" id="myImage" src="images/Memo.png" alt="Commuter Zone L Memo">
+							 </a>
+      					</span>
+   				</div>
+
+    				<div class="az-zoom az-windowed">
+     					 <div class="large az-large">
+       						 <a href="#" id="imgLink">
+		 						<img class="img-responsive" id="myImage" src="images/Memo.png" alt="Commuter Zone L Memo">
+							 </a>
+     					 </div>
+   					</div>
+
+ 			 </span>
+ 		</div>
+	</div>
+
+	<link rel="stylesheet" href="css/anythingzoomer.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script src="js/jquery.anythingzoomer.js"></script>
+	<script>
+	  	$(function() {
+  $("#zoom1").anythingZoomer({
+
+    // ***************** content areas *****************
+    // class of small content area; the element with this class
+    // name must be inside of the wrapper
+    smallArea: 'small',
+
+    // class of large content area; this class must exist inside
+    // of the wrapper. When the clone option is true, it will add
+    // this automatically
+    largeArea: 'large',
+
+    // Make a clone of the small content area, use css to modify
+    // the style; default is false;
+    // set to true here to clone the small content
+    clone: true,
+
+    // ***************** appearance *****************
+    // Set to true to add the overlay style while hovering the
+    // small content, false to disable
+    overlay: false,
+
+    // fade animation speed (in milliseconds)
+    speed: 100,
+
+    // How far outside the wrapped edges the mouse can go;
+    // previously called "expansionSize"
+    edge: 30,
+
+    // adjust the horizontal position of the large content inside
+    // the zoom window as desired
+    offsetX: 0,
+
+    // adjust the vertical position of the large content inside
+    // the zoom window as desired
+    offsetY: 0,
+
+    // ***************** functionality *****************
+    // event that allows toggling between small and large
+    // elements; default is double click ('dblclick')
+    switchEvent: 'dblclick',
+
+    // time to delay before revealing the zoom window.
+    delay: 0,
+
+    // ***************** edit mode *****************
+    // add x,y coordinates into zoom window to make it easier to
+    // find coordinates
+    edit: false,
+
+    // ***************** callbacks *****************
+    // AnythingZoomer done initializing
+    initialzied: function(e, zoomer) {},
+
+    // zoom window visible
+    zoom: function(e, zoomer) {},
+
+    // zoom window hidden
+    unzoom: function(e, zoomer) {}
+
+  });
+
+  $("#zoom2").anythingZoomer();
+});
+	</script>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+		$("#Legend").hide();
+	});
+
+	function updateView(btn, campus){
+		var image = $("#myImage");
+		var link = $("#imgLink");
+		var legend = $("#Legend");
+
+		if(campus == "CookDouglass"){
+			image.attr("src","images/CookDoug.png");
+			link.attr("href","images/CookDoug.png");
+			legend.show();
+		}
+		else if(campus == "CollegeAve"){
+			image.attr("src","images/CollegeAve.png");
+			link.attr("href","images/CollegeAve.png");
+			legend.show();
+		}
+		else if(campus == "Busch"){
+			image.attr("src","images/Busch.png");
+			link.attr("href","images/Busch.png");
+			legend.show();
+		}
+		else if(campus == "Livingston"){
+			image.attr("src","images/Livi.png");
+			link.attr("href","images/Livi.png");
+			legend.show();
+		}
+		else{
+			image.attr("src","images/Memo.png");
+			link.attr("href","images/Memo.png");
+			legend.hide();
+		}
+
+		$(".selected").removeClass("selected");
+		$(btn).addClass("selected");
+	}
+	</script>
+
+</body>
+</html>
